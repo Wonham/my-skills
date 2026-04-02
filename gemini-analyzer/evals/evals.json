@@ -1,0 +1,75 @@
+{
+  "skill_name": "gemini-analyzer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "feature-verification-dark-mode",
+      "prompt": "Check if dark mode has been implemented in this codebase. Show me all the relevant files and functions.",
+      "expected_output": "Analysis should identify whether dark mode is implemented and list relevant files/functions",
+      "assertions": [
+        {
+          "name": "uses_gemini_cli",
+          "description": "Should use gemini -p command for analysis",
+          "check": "output includes gemini -p command with @ syntax"
+        },
+        {
+          "name": "targets_relevant_directories",
+          "description": "Should target source directories",
+          "check": "command includes @src/ or similar directory references"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "auth-implementation-check",
+      "prompt": "Is JWT authentication implemented? List all auth-related endpoints and middleware in the codebase.",
+      "expected_output": "Should analyze entire codebase to find JWT auth implementation details",
+      "assertions": [
+        {
+          "name": "analyzes_full_codebase",
+          "description": "Should analyze multiple directories for auth implementation",
+          "check": "uses @ syntax with multiple directories or @./"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "security-pattern-search",
+      "prompt": "Search through the entire src/ directory for SQL injection vulnerabilities. Show how user inputs are handled.",
+      "expected_output": "Should search for SQL injection patterns and show input sanitization",
+      "assertions": [
+        {
+          "name": "targets_src_directory",
+          "description": "Should use @src/ for directory analysis",
+          "check": "command includes @src/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "architecture-analysis",
+      "prompt": "Analyze the overall architecture of this project. Show how modules are organized and what patterns are used.",
+      "expected_output": "Should provide architectural overview of the entire codebase",
+      "assertions": [
+        {
+          "name": "uses_gemini_for_large_analysis",
+          "description": "Should use Gemini CLI for comprehensive analysis",
+          "check": "includes gemini -p command"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "test-coverage-verification",
+      "prompt": "Check if the payment processing module is fully tested. List all test cases and what they cover.",
+      "expected_output": "Should analyze both source and test directories for payment module",
+      "assertions": [
+        {
+          "name": "targets_multiple_directories",
+          "description": "Should analyze both src and test directories",
+          "check": "includes @ with payment/ and tests/ directories"
+        }
+      ]
+    }
+  ]
+}
