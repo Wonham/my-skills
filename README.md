@@ -1,1 +1,28 @@
-IyBteS1za2lsbHMKCkNsYXVkZSBDb2RlIOiHquWumuS5ieaKgOiDveWQiOmbhiB8IFBlcnNvbmFsIENsYXVkZSBDb2RlIGFnZW50IHNraWxscyBjb2xsZWN0aW9uCgojIyDmioDog73liJfooaggfCBTa2lsbHMKCnwg5oqA6IO9IHwg6K+05piOIHwKfC0tLS0tLXwtLS0tLS18CnwgYGdlbWluaS1hbmFseXplcmAgfCDkvb/nlKggR2VtaW5pIENMSSDnmoTotoXlpKfkuIrkuIvmlofnqpflj6PliIbmnpDlrozmlbTku6PnoIHlupPvvIjpgILnlKjkuo4gMTAwS0IrIOaWh+S7tuOAgeWFqOebruW9leWIhuaekO+8iSB8CgojIyDlronoo4XkuI7kvb/nlKggfCBJbnN0YWxsYXRpb24gJiBVc2FnZQoK6K+m6KeBIFtTRVRVUC5tZF0oLi9TRVRVUC5tZCnvvIzljIXlkKvlrozmlbTnmoTmlrDorr7lpIfphY3nva7mraXpqqTvvJrmj5Lku7blkK/nlKjjgIFzZXR0aW5ncy5qc29uIOmFjee9ruOAgeaKgOiDveWuieijheOAggoKIyMg546v5aKD5L6d6LWWIHwgUmVxdWlyZW1lbnRzCgotIFtDbGF1ZGUgQ29kZV0oaHR0cHM6Ly9naXRodWIuY29tL2FudGhyb3BpY3MvY2xhdWRlLWNvZGUpIENMSQotIFtHZW1pbmkgQ0xJXShodHRwczovL2dpdGh1Yi5jb20vZ29vZ2xlLWdlbWluaS9nZW1pbmktY2xpKe+8iGdlbWluaS1hbmFseXplciDpnIDopoHvvIkKLSBOb2RlLmpzID49IDE4CgojIyDkvZzogIUgfCBBdXRob3IKCltAV29uaGFtXShodHRwczovL2dpdGh1Yi5jb20vV29uaGFtKQo=
+# my-skills
+
+Personal Claude Code agent skills collection for AI-assisted development workflow.
+
+## Features
+
+- **gemini-analyzer**: Analyze large codebases using Gemini CLI's massive context window
+- Extensible skill system for various development tasks
+
+## Quick Start
+
+```bash
+# Clone the repo
+git clone https://github.com/Wonham/my-skills.git
+cd my-skills
+
+# Follow SETUP.md for configuration
+```
+
+## Requirements
+
+- [Claude Code](https://github.com/anthropics/claude-code) CLI
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+- Node.js >= 18
+
+## Author
+
+[@Wonham](https://github.com/Wonham)
