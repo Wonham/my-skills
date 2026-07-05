@@ -1,28 +1,44 @@
 # my-skills
 
-Personal Claude Code agent skills collection for AI-assisted development workflow.
+Claude Code 自定义技能合集，用于保存和同步个人 AI 辅助开发工作流。
 
-## Features
+Personal Claude Code skills for a repeatable AI-assisted development workflow.
 
-- **gemini-analyzer**: Analyze large codebases using Gemini CLI's massive context window
-- Extensible skill system for various development tasks
+## Skills
 
-## Quick Start
+| Skill | Description |
+| --- | --- |
+| [`gemini-analyzer`](./gemini-analyzer/SKILL.md) | 使用 Gemini CLI 的大上下文窗口分析大型文件与代码库 |
+
+## 安装 | Installation
 
 ```bash
-# Clone the repo
 git clone https://github.com/Wonham/my-skills.git
-cd my-skills
-
-# Follow SETUP.md for configuration
+mkdir -p ~/.claude/skills
+cp -R my-skills/gemini-analyzer ~/.claude/skills/
 ```
 
-## Requirements
+重启 Claude Code 后即可使用已安装的技能。新设备的完整配置步骤见 [`SETUP.md`](./SETUP.md)。
 
-- [Claude Code](https://github.com/anthropics/claude-code) CLI
-- [Gemini CLI](https://github.com/google-gemini/gemini-cli)
-- Node.js >= 18
+Restart Claude Code after copying the skill. See [`SETUP.md`](./SETUP.md) for the complete workstation setup.
 
-## Author
+## 环境依赖 | Requirements
 
-[@Wonham](https://github.com/Wonham)
+- [Claude Code](https://github.com/anthropics/claude-code)
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli)（`gemini-analyzer` 需要）
+- Node.js 18+
+
+## Repository Structure
+
+```text
+my-skills/
+├── gemini-analyzer/
+│   ├── SKILL.md
+│   └── evals/
+├── SETUP.md
+└── README.md
+```
+
+## License
+
+[MIT](./LICENSE)
