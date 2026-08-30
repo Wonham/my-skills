@@ -10,6 +10,7 @@ Personal Codex and Claude Code skills for a repeatable AI-assisted development w
 | --- | --- |
 | [`gemini-analyzer`](./gemini-analyzer/SKILL.md) | 使用 Gemini CLI 的大上下文窗口分析大型文件与代码库 |
 | [`blender-cli-modeling`](./blender-cli-modeling/SKILL.md) | 通过 Blender CLI 和 `bpy` 完成建模、渲染、导出与结果验证 |
+| [`lumerical-ldf-reader`](./lumerical-ldf-reader/SKILL.md) | 无需安装 Lumerical，读取、检查并转换 MODE/FDTD `.ldf` D-card 数据 |
 
 ## 安装 | Installation
 
@@ -20,6 +21,7 @@ cp -R my-skills/gemini-analyzer ~/.claude/skills/
 
 mkdir -p ~/.codex/skills
 cp -R my-skills/blender-cli-modeling ~/.codex/skills/
+cp -R my-skills/lumerical-ldf-reader ~/.codex/skills/
 ```
 
 重启对应的 Agent 应用后即可使用已安装的技能。新设备的完整配置步骤见 [`SETUP.md`](./SETUP.md)。
@@ -32,6 +34,7 @@ Restart the corresponding agent application after copying a skill. See [`SETUP.m
 - [Claude Code](https://github.com/anthropics/claude-code)
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli)（`gemini-analyzer` 需要）
 - [Blender](https://www.blender.org/) 5.2 LTS（`blender-cli-modeling` 已验证版本）
+- Python 3.11+ 与 NumPy（`lumerical-ldf-reader`；导出 `.mat` 时另需 SciPy）
 - Node.js 18+
 
 ## Repository Structure
@@ -45,6 +48,10 @@ my-skills/
 │   ├── SKILL.md
 │   ├── agents/
 │   ├── references/
+│   └── scripts/
+├── lumerical-ldf-reader/
+│   ├── SKILL.md
+│   ├── agents/
 │   └── scripts/
 ├── SETUP.md
 └── README.md
