@@ -1,25 +1,13 @@
 # my-skills
 
-个人使用的 Agent Skills 孵化与索引仓库。
-
-这里主要保存仍在试验、验证或逐步成熟的自定义 Skill。具备稳定复用价值、适合公开维护的 Skill 会迁移到独立仓库；本仓库只保留索引，不重复保存副本。
-
-## 独立维护的 Skills
+个人使用的 Agent Skills 仓库。
 
 | Skill | 独立仓库 | 简介 |
 |---|---|---|
 | `blender-cli-modeling` | [Wonham/blender-cli-modeling](https://github.com/Wonham/blender-cli-modeling) | 通过 Blender CLI、`bpy` 与可选 MCP 创建、编辑和验证 Blender 场景 |
 | `lumerical-ldf-reader` | [Wonham/lumerical-ldf-reader](https://github.com/Wonham/lumerical-ldf-reader) | 在未安装 Lumerical 的机器上读取和导出已验证的 `.ldf` D-card 数据 |
+| `gemini-analyzer` | [Wonham/lumerical-ldf-reader](https://github.com/Wonham/lumerical-ldf-reader) | 在未安装 Lumerical 的机器上读取和导出已验证的 `.ldf` D-card 数据 |
 
-请直接从对应独立仓库安装和更新这些 Skill。它们不再在 `my-skills` 中保留第二份副本。
-
-## 孵化中的 Skills
-
-| Skill | 状态 | 简介 |
-|---|---|---|
-| [`gemini-analyzer`](./gemini-analyzer/SKILL.md) | 孵化中 | 使用 Gemini CLI 分析大型代码库和超长文件 |
-
-孵化中的 Skill 可能仍会调整接口、工作流和依赖，适合个人试用与继续打磨。
 
 ## 仓库管理原则
 
