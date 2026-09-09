@@ -1,59 +1,59 @@
 # my-skills
 
-Codex / Claude Code 自定义技能合集，用于保存和同步个人 AI 辅助开发工作流。
+个人使用的 Agent Skills 孵化与索引仓库。
 
-Personal Codex and Claude Code skills for a repeatable AI-assisted development workflow.
+这里主要保存仍在试验、验证或逐步成熟的自定义 Skill。具备稳定复用价值、适合公开维护的 Skill 会迁移到独立仓库；本仓库只保留索引，不重复保存副本。
 
-## Skills
+## 独立维护的 Skills
 
-| Skill | Description |
-| --- | --- |
-| [`gemini-analyzer`](./gemini-analyzer/SKILL.md) | 使用 Gemini CLI 的大上下文窗口分析大型文件与代码库 |
-| [`blender-cli-modeling`](./blender-cli-modeling/SKILL.md) | 通过 Blender CLI 和 `bpy` 完成建模、渲染、导出与结果验证 |
-| [`lumerical-ldf-reader`](./lumerical-ldf-reader/SKILL.md) | 无需安装 Lumerical，读取、检查并转换 MODE/FDTD `.ldf` D-card 数据 |
+| Skill | 独立仓库 | 简介 |
+|---|---|---|
+| `blender-cli-modeling` | [Wonham/blender-cli-modeling](https://github.com/Wonham/blender-cli-modeling) | 通过 Blender CLI、`bpy` 与可选 MCP 创建、编辑和验证 Blender 场景 |
+| `lumerical-ldf-reader` | [Wonham/lumerical-ldf-reader](https://github.com/Wonham/lumerical-ldf-reader) | 在未安装 Lumerical 的机器上读取和导出已验证的 `.ldf` D-card 数据 |
 
-## 安装 | Installation
+请直接从对应独立仓库安装和更新这些 Skill。它们不再在 `my-skills` 中保留第二份副本。
 
-```bash
+## 孵化中的 Skills
+
+| Skill | 状态 | 简介 |
+|---|---|---|
+| [`gemini-analyzer`](./gemini-analyzer/SKILL.md) | 孵化中 | 使用 Gemini CLI 分析大型代码库和超长文件 |
+
+孵化中的 Skill 可能仍会调整接口、工作流和依赖，适合个人试用与继续打磨。
+
+## 仓库管理原则
+
+- 可公开复用、需要长期维护的 Skill：迁移到独立公开仓库。
+- 尚在探索或未完全成熟的自定义 Skill：暂存于本仓库。
+- 已迁移的 Skill：这里只保留链接，不保留重复版本。
+- 历史内容：仍可通过 Git 提交记录追溯。
+
+## 安装
+
+克隆本仓库中的孵化 Skill：
+
+```zsh
 git clone https://github.com/Wonham/my-skills.git
-mkdir -p ~/.claude/skills
-cp -R my-skills/gemini-analyzer ~/.claude/skills/
-
-mkdir -p ~/.codex/skills
-cp -R my-skills/blender-cli-modeling ~/.codex/skills/
-cp -R my-skills/lumerical-ldf-reader ~/.codex/skills/
 ```
 
-重启对应的 Agent 应用后即可使用已安装的技能。新设备的完整配置步骤见 [`SETUP.md`](./SETUP.md)。
+然后把所需 Skill 目录复制或链接到智能体平台的 Skills 目录。以 `gemini-analyzer` 为例：
 
-Restart the corresponding agent application after copying a skill. See [`SETUP.md`](./SETUP.md) for the complete workstation setup.
+```zsh
+cp -R my-skills/gemini-analyzer ~/.claude/skills/
+```
 
-## 环境依赖 | Requirements
+独立维护的 Skill 请使用上方表格中的仓库地址安装。不同智能体平台的注册方式可能不同，但 Skill 根目录应包含 `SKILL.md`。
 
-- [Codex](https://openai.com/codex/) (`blender-cli-modeling`)
-- [Claude Code](https://github.com/anthropics/claude-code)
-- [Gemini CLI](https://github.com/google-gemini/gemini-cli)（`gemini-analyzer` 需要）
-- [Blender](https://www.blender.org/) 5.2 LTS（`blender-cli-modeling` 已验证版本）
-- Python 3.11+ 与 NumPy（`lumerical-ldf-reader`；导出 `.mat` 时另需 SciPy）
-- Node.js 18+
+更完整的个人环境说明见 [`SETUP.md`](./SETUP.md)。
 
-## Repository Structure
+## 当前结构
 
 ```text
 my-skills/
 ├── gemini-analyzer/
-│   ├── SKILL.md
-│   └── evals/
-├── blender-cli-modeling/
-│   ├── SKILL.md
-│   ├── agents/
-│   ├── references/
-│   └── scripts/
-├── lumerical-ldf-reader/
-│   ├── SKILL.md
-│   ├── agents/
-│   └── scripts/
+│   └── SKILL.md
 ├── SETUP.md
+├── LICENSE
 └── README.md
 ```
 

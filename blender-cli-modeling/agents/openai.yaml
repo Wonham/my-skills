@@ -1,4 +1,0 @@
-interface:
-  display_name: "Blender CLI Modeling"
-  short_description: "Verified headless Blender modeling and rendering"
-  default_prompt: "Use $blender-cli-modeling to create and verify a Blender scene from the command line."

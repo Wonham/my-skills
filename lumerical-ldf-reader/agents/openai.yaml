@@ -1,4 +1,0 @@
-interface:
-  display_name: "Lumerical LDF Reader"
-  short_description: "Read Lumerical mode-field LDF files without Lumerical"
-  default_prompt: "Use $lumerical-ldf-reader to inspect this Lumerical .ldf file and summarize its mode-field data."
